@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Татьяна Лазарева](https://up.htmlacademy.ru/adaptive/21/user/1437393).
-* Наставник: `Неизвестно`.
+* Наставник: [Artem Ryzhov](https://up.htmlacademy.ru/adaptive/21/user/1387905).
 
 ---
 
