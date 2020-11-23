@@ -21,29 +21,29 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a>
+            <a class="site-list__link">
               Каталог товаров
             </a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">
+            <a class="site-list__link" href="form.html">
               Вязание на заказ
             </a>
           </li>
           <li class="site-list__item site-list__item--desktop">
-            <a href="">
+            <a class="site-list__link" href="">
               Новые поступления
             </a>
           </li>
           <li class="site-list__item site-list__item--desktop">
-            <a href="">
+            <a class="site-list__link" href="">
               Распродажа
             </a>
           </li>
         </ul>
         <div class="main-nav__list user-list">
           <form class="user-list__search-form">
-            <label class="user-list__label" for="">Поиск по сайту</label>
+            <label class="user-list__label" for="search">Поиск по сайту</label>
             <input class="user-list__input" type="search" id="search" name="" value="">
           </form>
           <a class="user-list__cart" href="">
@@ -64,21 +64,27 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <img class="catalog__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Вязаный зайчик">
-            <h3 class="catalog__title">Зайчик-попрыгайчик</h3>
-            <p class="catalog__description">Рост 30 см, вес 200 г</p>
-            <p class="catalog__price">1 200 руб.</p>
+            <div class="catalog__item-container">
+              <h3 class="catalog__title">Зайчик-попрыгайчик</h3>
+              <p class="catalog__description">Рост 30 см, вес 200 г</p>
+              <p class="catalog__price">1 200 руб.</p>
+            </div>
           </li>
           <li class="catalog__item">
             <img class="catalog__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Вязаная корзинка">
-            <h3 class="catalog__title">Корзинка для белья</h3>
-            <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
-            <p class="catalog__price">690 руб.</p>
+            <div class="catalog__item-container">
+              <h3 class="catalog__title">Корзинка для белья</h3>
+              <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
+              <p class="catalog__price">690 руб.</p>
+            </div>
           </li>
           <li class="catalog__item">
             <img class="catalog__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Корзинка с игрушками">
-            <h3 class="catalog__title">Большая корзинка для игрушек</h3>
-            <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
-            <p class="catalog__price">1 500 руб.</p>
+            <div class="catalog__item-container">
+              <h3 class="catalog__title">Большая корзинка для игрушек</h3>
+              <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
+              <p class="catalog__price">1 500 руб.</p>
+            </div>
           </li>
         </ul>
       </div>
