@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>MiSHKA</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
-  <header class="page__header">
+  <header class="page-header">
     <div class="page-header__logo">
       <a class="logo">
         <img class="logo__image" src="https://via.placeholder.com/86x35" width="86" height="35" alt="MiSHKA - Милые штуки ручной работы для дома">
@@ -20,29 +21,29 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">
+            <a class="site-list__link" href="catalog.html">
               Каталог товаров
             </a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">
+            <a class="site-list__link" href="form.html">
               Вязание на заказ
             </a>
           </li>
           <li class="site-list__item site-list__item--desktop">
-            <a href="">
+            <a class="site-list__link" href="">
               Новые поступления
             </a>
           </li>
           <li class="site-list__item site-list__item--desktop">
-            <a href="">
+            <a class="site-list__link" href="">
               Распродажа
             </a>
           </li>
         </ul>
         <div class="main-nav__list user-list">
           <form class="user-list__search-form">
-            <label class="user-list__label" for="">Поиск по сайту</label>
+            <label class="user-list__label" for="search">Поиск по сайту</label>
             <input class="user-list__input" type="search" id="search" name="" value="">
           </form>
           <a class="user-list__cart" href="">
@@ -50,7 +51,7 @@
           </a>
         </div>
       </div>
-      <p class="user-list__text">
+      <p class="main-nav__text">
         Бесплатная доставка по России
       </p>
     </nav>
@@ -125,8 +126,10 @@
             <cite class="reviews__author-name">Екатерина Красильникова</cite>
             <p class="reviews__email">@misssssiskras2</p>
           </blockquote>
-          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__next" type="button">Следующий отзыв</button>
+          <div class="reviews__arrows">
+            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+            <button class="reviews__next" type="button">Следующий отзыв</button>
+          </div>
         </div>
         <a class="reviews__button button" href="review-form.html">Написать</a>
       </div>
@@ -144,9 +147,9 @@
             <dd class="contacts__description">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
           </div>
         </dl>
+        <img class="contacts__map" src="https://via.placeholder.com/320x455" width="320" height="455" alt="Магазин MiSHKA на карте города">
+        <a class="contacts__button button" href="">Напишите нам</a>
       </div>
-      <img class="contacts__map" src="https://via.placeholder.com/320x455" width="320" height="455" alt="Магазин MiSHKA на карте города">
-      <a class="contacts__button button" href="">Напишите нам</a>
     </section>
   </main>
   <footer class="page-footer">
