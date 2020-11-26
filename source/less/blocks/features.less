@@ -1,5 +1,35 @@
-.features-wrapper {
+.features__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
   margin-bottom: 42px;
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+    padding: 0 50px;
+  }
+}
+
+.features__header {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    justify-content: flex-start;
+  }
 }
 
 .features__title {
@@ -9,6 +39,16 @@
   line-height: 20px;
   color: @color-main-theme;
   text-transform: uppercase;
+  order: 2;
+
+  @media (min-width: @tablet-width) {
+    width: 100px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 0;
+  }
 }
 
 .features__sub-title {
@@ -19,12 +59,34 @@
   color: @color-heading;
 }
 
+.features__content-wrapper {
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "feature-text feature-image"
+    "feature-list feature-image"
+    "feature-price feature-image"
+    "feature-button feature-image";
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+  }
+}
+
 .features__text {
   .reset ();
   margin-top: 17px;
   margin-bottom: 18px;
   font-size: 15px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: feature-text;
+  }
 }
 
 .features__list {
@@ -32,16 +94,42 @@
   margin-bottom: 28px;
   font-size: 15px;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: feature-list;
+  }
 }
 
 .features__image {
   display: block;
   width: 260px;
   height: 315px;
-  margin-bottom: 25px;
+  // margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 334px;
+    height: 404px;
+    grid-area: feature-image;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 525px;
+    height: 636px;
+  }
 }
 
 .features__price {
   .reset ();
   margin-bottom: 25px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    grid-area: feature-price;
+  }
+}
+
+.features__button-wrapper {
+  @media (min-width: @tablet-width) {
+    grid-area: feature-button;
+  }
 }

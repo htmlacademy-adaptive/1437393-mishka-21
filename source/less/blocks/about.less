@@ -1,6 +1,19 @@
 .about__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
   padding-top: 31px;
   margin-bottom: 58px;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    padding-left: 175px;
+  }
 }
 
 .about__title {
@@ -14,11 +27,28 @@
 
 .about__list {
   .reset ();
+  width: 260px;
+  display: flex;
+  flex-direction: column;
   list-style: none;
   line-height: 20px;
   font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+  }
 }
 
 .about__item {
   padding-top: 83px;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
 }
