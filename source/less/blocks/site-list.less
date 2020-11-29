@@ -1,3 +1,27 @@
+.site-list {
+  @media (min-width: @tablet-width) {
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+
 .site-list__link {
   color: @color-heading;
+}
+
+.site-list__item--desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
