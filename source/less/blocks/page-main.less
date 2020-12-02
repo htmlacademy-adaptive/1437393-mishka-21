@@ -1,7 +1,32 @@
+.page-main__title {
+  .reset ();
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  color: @color-heading;
+  text-align: center;
+}
+
 .page-main__title--inner {
+  width: 320px;
+  margin: 0 auto;
   margin-bottom: 30px;
   padding-top: 74px;
   padding-bottom: 74px;
   text-align: center;
   background-color: @color-footer-background;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 50px;
+    padding-top: 74px;
+    padding-bottom: 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+    padding: 0 50px;
+    padding-top: 74px;
+    padding-bottom: 74px;
+  }
 }
