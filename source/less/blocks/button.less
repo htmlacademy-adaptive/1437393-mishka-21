@@ -11,4 +11,18 @@
   background-color: @color-background;
   border: 2px solid @color-text;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: @color-background;
+    background: linear-gradient(0deg, #444444, #444444);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 292px;
+  }
 }
