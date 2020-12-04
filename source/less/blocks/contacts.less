@@ -13,7 +13,6 @@
       "contacts-header contacts-image"
       "contact-list contacts-image"
       "contacts-button contacts-image";
-  }
 }
 
 .contacts__title {
@@ -62,7 +61,6 @@
     margin-bottom: 29px;
     flex-direction: column;
     justify-content: flex-start;
-    grid-area: contact-list;
   }
 }
 
@@ -108,7 +106,10 @@
   @media (min-width: @desktop-width) {
     width: 527px;
     height: 457px;
-    grid-area: contacts-image;
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: -1;
   }
 }
 
