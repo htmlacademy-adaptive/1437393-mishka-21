@@ -1,17 +1,15 @@
 .about__wrapper {
-  width: 320px;
   margin: 0 auto;
   padding: 0 30px;
   padding-top: 31px;
   margin-bottom: 58px;
 
   @media (min-width: @tablet-width) {
-    width: 668px;
     padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1050px;
+    max-width: 1050px;
     padding-left: 175px;
   }
 }
@@ -23,11 +21,22 @@
   line-height: 30px;
   font-weight: bold;
   color: @color-heading;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 39px;
+  }
 }
 
 .about__list {
   .reset ();
-  width: 260px;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -35,9 +44,10 @@
   font-weight: bold;
 
   @media (min-width: @tablet-width) {
-    width: 668px;
     flex-direction: row;
     flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 22px;
   }
 
   @media (min-width: @desktop-width) {
@@ -50,5 +60,11 @@
 
   @media (min-width: @tablet-width) {
     width: 50%;
+    margin-bottom: 53px;
+    padding-top: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 57px;
   }
 }

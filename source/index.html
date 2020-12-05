@@ -10,19 +10,19 @@
 
 <body class="page__body">
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <div class="main-nav__wrapper">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__logo">
           <a class="logo">
-            <img class="logo__image" src="https://via.placeholder.com/86x35" width="86" height="35" alt="MiSHKA - Милые штуки ручной работы для дома">
+            <img class="logo__image logo__image--header" src="https://via.placeholder.com/86x35" width="86" height="35" alt="MiSHKA - Милые штуки ручной работы для дома">
           </a>
         </div>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">
+              <a class="site-list__link site-list__link--top" href="catalog.html">
                 Каталог товаров
               </a>
             </li>
@@ -32,12 +32,12 @@
               </a>
             </li>
             <li class="site-list__item site-list__item--desktop">
-              <a class="site-list__link" href="">
+              <a class="site-list__link site-list__link--desktop" href="">
                 Новые поступления
               </a>
             </li>
             <li class="site-list__item site-list__item--desktop">
-              <a class="site-list__link" href="">
+              <a class="site-list__link site-list__link--desktop" href="">
                 Распродажа
               </a>
             </li>
@@ -48,7 +48,7 @@
               <input class="user-list__input" type="search" id="search" name="" value="">
             </form>
             <a class="user-list__cart" href="">
-              Корзина пока пуста
+              Корзина: пока пуста
             </a>
           </div>
         <p class="main-nav__text">
@@ -59,15 +59,15 @@
   </header>
   <main class="page-main">
     <section class="promo">
-      <h1 class="promo__page-title">Милые штуки ручной работы для дома</h1>
+      <h1 class="promo__page-title">Милые штуки ручной<br> работы для дома</h1>
       <div class="promo__wrapper">
         <h2 class="visually-hidden">Наши предложения</h2>
         <ul class="promo__list">
-          <li class="promo__item promo__item--interior">
-            <a class="promo__link" href="#">Предметы интерьера</a>
+          <li class="promo__item">
+            <a class="promo__link promo__link--interior" href="#">Предметы<br class="promo-break"> интерьера</a>
           </li>
-          <li class="promo__item promo__item--toys">
-            <a class="promo__link" href="#">Детские игрушки</a>
+          <li class="promo__item">
+            <a class="promo__link promo__link--toys" href="#">Детские<br class="promo-break"> игрушки</a>
           </li>
         </ul>
       </div>
@@ -79,7 +79,7 @@
           <h3 class="features__sub-title">Вязаные корзинки</h3>
         </header>
         <div class="features__content-wrapper">
-          <p class="features__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <p class="features__text">Экологически чистая пряжа, ручная работа. Доступны в шести<br> расцветках, и трех размерах.</p>
           <dl class="features__list">
             <div class="features__item">
               <dt class="features__option">Цвет:</dt>
@@ -106,12 +106,12 @@
       <div class="about__wrapper">
         <h2 class="about__title">Коротко о нас:</h2>
         <ul class="about__list">
-          <li class="about__item about__item--eco">Экологически чистые материалы</li>
-          <li class="about__item about__item--handmade">Связано вручную с любовью и умилением</li>
-          <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
-          <li class="about__item about__item--support">Поддержка отечественного производителя</li>
-          <li class="about__item about__item--likes">Увеличивает лайки на фотографиях</li>
-          <li class="about__item about__item--unique">Поставляется в уникальной упаковке</li>
+          <li class="about__item about__item--eco">Экологически<br> чистые материалы</li>
+          <li class="about__item about__item--handmade">Связано вручную<br> с любовью и умилением</li>
+          <li class="about__item about__item--style">Скандинавский стиль<br> по российской цене</li>
+          <li class="about__item about__item--support">Поддержка отечественного<br> производителя</li>
+          <li class="about__item about__item--likes">Увеличивает лайки<br> на фотографиях</li>
+          <li class="about__item about__item--unique">Поставляется<br> в уникальной упаковке</li>
         </ul>
       </div>
     </section>
@@ -132,8 +132,8 @@
             <p class="reviews__email">@misssssiskras2</p>
           </blockquote>
           <div class="reviews__arrows">
-            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-            <button class="reviews__next" type="button">Следующий отзыв</button>
+            <button class="reviews__prev" type="button" aria-label="Предыдущий отзыв"></button>
+            <button class="reviews__next" type="button" aria-label="Следующий отзыв"></button>
           </div>
         </div>
         <a class="reviews__button button" href="review-form.html">Написать</a>
@@ -145,7 +145,7 @@
         <dl class="contacts__list">
           <div class="contacts__item">
             <dt class="contacts__type">e-mail:</dt>
-            <dd class="contacts__description">info@mishkashop.ru</dd>
+            <dd class="contacts__description">info@mimimishkashop.ru</dd>
           </div>
           <div class="contacts__item">
             <dt class="contacts__type">адрес:</dt>
@@ -161,19 +161,19 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
         <a class="logo">
-          <img class="logo__image" src="https://via.placeholder.com/102x34" width="102" height="34" alt="">
+          <img class="logo__image logo__image--footer" src="https://via.placeholder.com/102x34" width="102" height="34" alt="">
         </a>
       </div>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="">Мы в Инстаграме</a>
+            <a class="social__link social__link--instagram" href="" aria-label="Мы в Инстаграме"></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="">Мы в Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="" aria-label="Мы в Фейсбуке"></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="">Мы в Твиттере</a>
+            <a class="social__link social__link--twitter" href="" aria-label="Мы в Твиттере"></a>
           </li>
         </ul>
       </div>
@@ -183,6 +183,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/menu.js"></script>
+
 </body>
 
 </html>
