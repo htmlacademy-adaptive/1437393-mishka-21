@@ -1,20 +1,35 @@
-.video__wrapper {
+.video {
   width: 320px;
   padding: 0 30px;
   margin: 0 auto;
-  margin-bottom: 58px;
-  padding-top: 22px;
-  padding-bottom: 33px;
-  display: grid;
+  margin-bottom: 59px;
 
   @media (min-width: @tablet-width) {
     width: 768px;
     padding: 0 50px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1150px;
-    padding: 0 50px;
+    margin-bottom: 105px;
+  }
+}
+
+.video__wrapper {
+  display: grid;
+  width: 260px;
+  padding-bottom: 31px;
+  border: 1px solid @color-nav-border;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    padding-bottom: 0;
     grid-template-columns: 683px 1fr;
     grid-template-rows: auto auto auto;
   }
@@ -22,11 +37,36 @@
 
 .video__title {
   .reset ();
+  padding-top: 22px;
+  padding-bottom: 24px;
+  padding-left: 90px;
+  font-size: 17px;
+  line-height: 24px;
   font-weight: bold;
   color: @color-heading;
 
   @media (min-width: @tablet-width) {
+    padding-left: 106px;
+    padding-top: 42px;
+    padding-bottom: 0;
+    margin-bottom: 24px;
+    font-size: 20px;
     order: 2;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 97px;
+    padding-left: 79px;
+    margin-bottom: 0;
+  }
+}
+
+.video__break {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
@@ -34,10 +74,12 @@
   display: block;
   width: 260px;
   height: 150px;
+  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     width: 668px;
     height: 455px;
+    margin-bottom: 0;
     order: 1;
   }
 
@@ -53,20 +95,38 @@
 
 .video__text {
   .reset ();
+  padding-left: 34px;
+  margin-bottom: 41px;
   font-size: 13px;
   line-height: 24px;
 
   @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    margin-bottom: 40px;
     order: 3;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 79px;
+    padding-top: 20px;
   }
 }
 
 .video__button {
+  width: 192px;
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
+    width: 584px;
     order: 4;
   }
 
   @media (min-width: @desktop-width) {
+    width: 230px;
     margin-top: auto;
+    margin-bottom: 60px;
+    margin-left: 81px;
   }
 }
