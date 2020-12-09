@@ -84,6 +84,7 @@
     display: grid;
     grid-template-columns: 292px 1fr;
     grid-template-rows: repeat(4, auto);
+    column-gap: 42px;
     grid-template-areas:
       "feature-text feature-image"
       "feature-list feature-image"
@@ -152,13 +153,11 @@
 
 .features__image {
   display: block;
-  width: 260px;
-  height: 315px;
+  width: 100%;
+  height: auto;
   margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    width: 334px;
-    height: 404px;
     grid-area: feature-image;
     margin-left: auto;
     margin-bottom: 0;

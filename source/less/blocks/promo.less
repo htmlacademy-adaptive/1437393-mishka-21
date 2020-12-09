@@ -1,24 +1,40 @@
 .promo {
   margin: 0 auto;
   margin-bottom: 30px;
-  background-image: url("../img/hero-mobile-1.jpg");
+  background-image: url("../img/hero-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center top -18px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-position: center top -40px;
+    background-size: cover;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0 50px;
     margin-bottom: 40px;
     margin-top: -70px;
-    background-image: url("../img/hero-desktop-2.jpg");
-    background-size: cover;
+    background-image: url("../img/hero-tablet.jpg");
+    background-position: center 0;
+    background-size: 1150px auto;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-tablet@2x.jpg");
   }
 
   @media (min-width: @desktop-width) {
     max-width: 1150px;
     margin-bottom: 41px;
     margin-top: -63px;
-    background-image: url("../img/hero-desktop-1.jpg");
+    background-image: url("../img/hero-desktop.jpg");
+    background-position: 0 0;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-desktop@2x.jpg");
   }
 }
 

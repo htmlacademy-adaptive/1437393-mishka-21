@@ -6,6 +6,7 @@
   margin: 0 auto;
   padding: 0 30px;
   padding-bottom: 51px;
+  background: none;
 
 
   @media (min-width: @tablet-width) {
@@ -15,12 +16,22 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-image: url("../img/review-bg.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/review-bg@2x.png");
+    background-size: 350px auto;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 1150px;
     padding: 0 50px;
+    padding-top: 78px;
     padding-bottom: 96px;
+    background-position: left 50px top 0;
   }
 }
 
