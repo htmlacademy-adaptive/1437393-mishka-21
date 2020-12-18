@@ -62,11 +62,6 @@
   width: 100%;
   height: auto;
 
-  @media (min-width: @tablet-width) {
-    // width: 334px;
-    // height: 334px;
-  }
-
   @media (min-width: @desktop-width) {
     width: 316px;
     height: 462px;
@@ -74,9 +69,10 @@
 }
 
 .catalog__item-container {
+  position: relative;
   padding-top: 27px;
-  padding-bottom: 25px;
   padding-left: 28px;
+  padding-right: 28px;
   border: 1px solid @color-nav-border;
 
   &:hover,
@@ -98,6 +94,43 @@
   @media (min-width: @desktop-width) {
     padding-left: 28px;
     min-height: 197px;
+  }
+}
+
+.catalog__button {
+  .reset ();
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.catalog__icon-cart {
+  position: absolute;
+  width: 20px;
+  height: 19px;
+  right: 26px;
+  bottom: 31px;
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    fill: @color-main-theme;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: @color-main-theme;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    right: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 29px;
+    right: 32px;
   }
 }
 
@@ -134,8 +167,11 @@
   line-height: 30px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 0;
     font-size: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 13px;
   }
 }
 
@@ -146,10 +182,17 @@
   line-height: 24px;
   font-weight: bold;
   color: @color-heading;
+  border-top: 1px solid @color-nav-border;
 
   @media (min-width: @tablet-width) {
-    padding-top: 0;
+    padding-top: 23px;
     margin-top: auto;
+    margin-bottom: 24px;
     font-size: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 25px;
+    margin-bottom: 22px;
   }
 }

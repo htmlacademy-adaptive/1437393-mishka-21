@@ -3,6 +3,7 @@
 }
 
 .page-footer__wrapper {
+  width: auto;
   margin: 0 auto;
   padding: 0 30px;
 
@@ -27,6 +28,17 @@
 }
 
 .logo__image--footer {
+  fill: @color-heading;
+
+  &:hover,
+  &:focus {
+    fill: @color-toys-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     width: 102px;
     height: 34px;
@@ -34,19 +46,13 @@
 }
 
 .page-footer__copyright {
-  padding-top: 30px;
+  width: 100%;
+  padding-top: 22px;
   padding-bottom: 30px;
+  border-top: 1px solid @color-footer-border;
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    margin-left: auto;
+    border-top: none;
   }
-}
-
-.copyright__text {
-  .reset ();
-  font-size: 19px;
-  line-height: 18px;
-  font-weight: bold;
-  color: @color-heading;
 }
