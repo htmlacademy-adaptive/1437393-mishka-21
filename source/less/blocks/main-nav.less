@@ -8,7 +8,8 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 50px;
-    grid-template-columns: auto 1fr;
+    min-height: 89px;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     border-bottom: none;
   }
@@ -84,6 +85,7 @@
     margin-left: auto;
     padding-top: 20px;
     font-weight: normal;
+    z-index: 20;
   }
 
   @media (min-width: @desktop-width) {
@@ -147,6 +149,14 @@
 
 .main-nav--nojs .main-nav__toggle {
   display: none;
+}
+
+.main-nav--closed .user-list__search-button {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .main-nav--nojs .main-nav__wrapper {

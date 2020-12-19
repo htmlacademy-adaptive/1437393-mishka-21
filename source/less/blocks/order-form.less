@@ -16,6 +16,7 @@
 }
 
 .order-form__title {
+  position: relative;
   .reset ();
   width: auto;
   margin-bottom: 17px;
@@ -44,6 +45,29 @@
     padding-bottom: 96px;
     margin-top: -64px;
     margin-bottom: 115px;
+  }
+}
+
+.order-form__title::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 770px;
+    height: 24px;
+    bottom: -13px;
+    left: 50%;
+    margin-left: -385px;
+    background-image: url("../img/zigzag-fill-tablet.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+    height: 34px;
+    bottom: -16px;
+    margin-left: -575px;
+    background-image: url("../img/zigzag-fill-desktop.svg");
   }
 }
 

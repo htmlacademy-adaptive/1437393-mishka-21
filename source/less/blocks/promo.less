@@ -13,11 +13,11 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 50px;
-    margin-bottom: 40px;
+    margin-bottom: 54px;
     margin-top: -70px;
     background-image: url("../img/hero-tablet.jpg");
     background-position: center 0;
-    background-size: 1150px auto;
+    background-size: cover auto;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
 
@@ -27,7 +27,7 @@
 
   @media (min-width: @desktop-width) {
     max-width: 1150px;
-    margin-bottom: 41px;
+    margin-bottom: 56px;
     margin-top: -63px;
     background-image: url("../img/hero-desktop.jpg");
     background-position: 0 0;
@@ -65,6 +65,7 @@
 }
 
 .promo__list {
+  position: relative;
   .reset ();
   width: auto;
   list-style: none;
@@ -75,8 +76,32 @@
   }
 }
 
+.promo__list::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 770px;
+    height: 24px;
+    bottom: -13px;
+    left: 50%;
+    margin-left: -385px;
+    background-image: url("../img/zigzag-fill-tablet.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+    height: 34px;
+    bottom: -16px;
+    margin-left: -575px;
+    background-image: url("../img/zigzag-fill-desktop.svg");
+  }
+}
+
 .promo__link {
   display: block;
+  position: relative;
   padding-left: 30px;
   padding-top: 24px;
   padding-bottom: 31px;
@@ -89,20 +114,50 @@
     line-height: 30px;
     padding-left: 36px;
     padding-top: 25px;
-    padding-bottom: 46px;
+    padding-bottom: 33px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 37px;
-    padding-bottom: 51px;
+    padding-bottom: 36px;
   }
 }
 
-.promo-break {
-  display: none;
+.promo__icon {
+  position: absolute;
+  opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.promo__icon--interior {
+  width: 40px;
+  height: 62px;
+  top: 23px;
+  right: 36px;
 
   @media (min-width: @tablet-width) {
-    display: block;
+    top: 30px;
+    right: 37px;
+  }
+}
+
+.promo__icon--toys {
+  width: 60px;
+  height: 60px;
+  top: 21px;
+  right: 27px;
+
+  @media (min-width: @tablet-width) {
+    top: 32px;
+    right: 33px;
   }
 }
 

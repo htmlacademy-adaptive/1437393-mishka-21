@@ -7,13 +7,11 @@
 }
 
 .user-list__cart {
-  position: relative;
   display: block;
   width: auto;
   text-align: center;
   padding-top: 29px;
   padding-bottom: 23px;
-  padding-left: 30px;
   padding-right: 30px;
   font-weight: bold;
   font-size: 17px;
@@ -30,12 +28,88 @@
     opacity: 0.3;
   }
 
+  &:hover .user-list__icon-cart,
+  &:focus .user-list__icon-cart {
+    fill: @color-main-theme;
+    opacity: 1;
+  }
+
+  &:active .user-list__icon-cart {
+    fill: @color-main-theme;
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
+    width: auto;
     padding-right: 0;
-    padding-top: 32px;
+    padding-top: 31px;
     padding-bottom: 31px;
     border-bottom: none;
   }
+}
+
+.user-list__icon-cart {
+  margin-right: 22px;
+  opacity: 0.2;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 28px;
+    margin-top: 3px;
+  }
+}
+
+.user-list__form-wrapper {
+  width: auto;
+  border-bottom: 1px solid @color-nav-border;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.user-list__search-form {
+  width: 256px;
+  margin: 0 auto;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: auto;
+    min-height: 90px;
+    margin-right: 63px;
+  }
+}
+
+.user-list__search-form::before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 89px;
+    top: 0;
+    left: -36px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.user-list__search-form::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 89px;
+    top: 0;
+    left: 48px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.user-list__search-button {
+  .reset ();
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .user-list__label {
@@ -45,13 +119,11 @@
   text-align: center;
   padding-top: 29px;
   padding-bottom: 27px;
-  padding-left: 30px;
   padding-right: 30px;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
   color: @color-heading;
-  border-bottom: 1px solid @color-nav-border;
 
   &:hover,
   &:focus {
@@ -65,6 +137,26 @@
   @media (min-width: @tablet-width) {
     display: none;
     border-bottom: none;
+  }
+}
+
+.user-list__icon--search {
+  margin-right: 26px;
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    fill: @color-main-theme;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: @color-main-theme;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
   }
 }
 

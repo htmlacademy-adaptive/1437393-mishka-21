@@ -1,6 +1,6 @@
 .social {
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 21px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -9,7 +9,39 @@
 
 .social__list {
   .reset ();
+  width: 142px;
+  margin: 0 auto;
   list-style: none;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 63px;
+  }
+}
+
+.social__icons {
+  fill: @color-nav-toggle;
+
+  &:hover,
+  &:focus {
+    fill: @color-toys-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__icons--insta {
+  margin-top: 3px;
+}
+
+.social__icons--twitter {
+  margin-top: 4px;
 }

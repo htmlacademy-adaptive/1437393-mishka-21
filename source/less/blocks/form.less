@@ -87,6 +87,8 @@
 }
 
 .form__legend {
+  position: relative;
+  display: flex;
   margin-bottom: 30px;
   font-size: 17px;
   line-height: 16px;
@@ -102,6 +104,20 @@
   @media (min-width: @desktop-width) {
     width: 175px;
     padding-left: 61px;
+  }
+}
+
+.form__legend::after {
+  position: absolute;
+  content: "";
+  width: 77%;
+  height: 1px;
+  top: 7px;
+  right: 0;
+  background-color: @color-radio-hover;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
@@ -213,6 +229,7 @@
 }
 
 .form__item--contacts {
+  position: relative;
   margin-bottom: 34px;
   display: flex;
   flex-direction: column;
@@ -415,6 +432,7 @@
 }
 
 .form__name-label--contacts {
+  position: relative;
   line-height: 16px;
   font-weight: bold;
   color: @color-main-theme;
@@ -431,6 +449,24 @@
     padding-left: 62px;
     margin-right: 39px;
   }
+}
+
+.form__name-label--contacts::after {
+  position: absolute;
+  content: "";
+  width: 77%;
+  height: 1px;
+  top: 7px;
+  right: 0;
+  background-color: @color-radio-hover;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.form__name-label--mail-contacts::after {
+  width: 70%;
 }
 
 .form__name-input--contacts {
@@ -453,6 +489,48 @@
 
   @media (min-width: @desktop-width) {
     margin-right: 175px;
+  }
+}
+
+.form__item--contacts:hover .form__icon,
+.form__item--contacts:focus .form__icon,
+.form__item--contacts:active .form__icon {
+  opacity: 1;
+  fill: @color-radio-hover;
+}
+
+.form__icon {
+  position: absolute;
+  opacity: 0.2;
+}
+
+.form__icon--phone {
+  width: 25px;
+  height: 24px;
+  right: 7px;
+  bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    right: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 183px;
+  }
+}
+
+.form__icon--mail {
+  width: 32px;
+  height: 21px;
+  right: 3px;
+  bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    right: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 179px;
   }
 }
 
