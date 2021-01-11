@@ -12,9 +12,9 @@
   width: 142px;
   margin: 0 auto;
   list-style: none;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 41px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -36,6 +36,10 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.social__link:focus svg {
+  fill: @color-toys-hover;
 }
 
 .social__icons--insta {

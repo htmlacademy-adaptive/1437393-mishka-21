@@ -12,10 +12,12 @@
   margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 1150px;
+    margin: 0 auto;
     margin-bottom: 24px;
   }
 }
@@ -36,6 +38,12 @@
   @media (min-width: @tablet-width) {
     padding-top: 8px;
     padding-bottom: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-bottom: 34px;
   }
 }
 
@@ -70,6 +78,20 @@
   }
 }
 
+.form__fielset-wrapper--color {
+  @media (min-width: @desktop-width) {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+}
+
+.form__fielset-wrapper--wishes {
+  @media (min-width: @desktop-width) {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+}
+
 .form__fielset-bottom-wrapper {
   padding: 0 30px;
 
@@ -83,12 +105,13 @@
   @media (min-width: @desktop-width) {
     max-width: 1150px;
     padding: 0 225px;
+    margin: 0 auto;
   }
 }
 
-.form__legend {
+.form__title {
+  .reset ();
   position: relative;
-  display: flex;
   margin-bottom: 30px;
   font-size: 17px;
   line-height: 16px;
@@ -107,7 +130,7 @@
   }
 }
 
-.form__legend::after {
+.form__title::after {
   position: absolute;
   content: "";
   width: 77%;
@@ -121,7 +144,7 @@
   }
 }
 
-.form__legend--color {
+.form__title--color {
   margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
@@ -129,13 +152,13 @@
   }
 }
 
-.form__legend--name {
+.form__title--name {
   @media (min-width: @tablet-width) {
     padding-top: 18px;
   }
 }
 
-.form__legend--wishes {
+.form__title--wishes {
   margin-bottom: 23px;
 }
 
@@ -170,6 +193,11 @@
   @media (min-width: @tablet-width) {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1050px;
+    margin: 0 auto;
   }
 }
 
@@ -291,9 +319,18 @@
   }
 }
 
+.form__radio:disabled + label::before {
+  border: 2px solid @color-footer-background;
+}
+
 .form__radio + label:hover::before,
 .form__radio + label:focus::before {
   border-color: @color-radio-hover;
+}
+
+.form__radio:focus + label::before {
+  border-color: @color-radio-hover;
+  outline: thin dotted;
 }
 
 .form__radio + label:active::before {
@@ -352,6 +389,10 @@
     top: -15px;
     left: 0;
   }
+}
+
+.form__checkbox:disabled + label::before {
+  border: 2px solid @color-footer-border;
 }
 
 .form__checkbox:hover + label::before,
@@ -569,6 +610,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 501px;
     height: 142px;
     margin-left: auto;
   }

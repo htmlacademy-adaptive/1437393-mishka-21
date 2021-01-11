@@ -72,6 +72,7 @@
 
 .features__title {
   .reset ();
+  margin-top: 5px;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
@@ -82,6 +83,7 @@
   @media (min-width: @tablet-width) {
     width: 100px;
     margin-right: 12px;
+    margin-top: 0;
     text-align: center;
     line-height: 17px;
     align-self: center;
@@ -89,6 +91,7 @@
 
   @media (min-width: @desktop-width) {
     order: 0;
+    margin-top: -5px;
   }
 }
 
@@ -151,7 +154,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 166px;
-    margin-bottom: 35px;
+    margin-bottom: 16px;
   }
 }
 
@@ -163,11 +166,7 @@
 
   @media (min-width: @tablet-width) {
     grid-area: feature-list;
-    margin-bottom: 36px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 87px;
+    margin-bottom: 26px;
   }
 }
 
@@ -214,18 +213,22 @@
   @media (min-width: @tablet-width) {
     grid-area: feature-price;
     font-size: 20px;
-    margin-bottom: 0;
+    margin-top: auto;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: -5px;
   }
 }
 
 .features__button-wrapper {
+  width: 260px;
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
     margin-top: auto;
     grid-area: feature-button;
     width: 292px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: auto;
   }
 }
