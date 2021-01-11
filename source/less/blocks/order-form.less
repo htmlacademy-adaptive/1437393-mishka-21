@@ -1,10 +1,6 @@
 .order-form {
   width: auto;
   margin: 0 auto;
-
-  @media (min-width: @desktop-width) {
-    max-width: 1150px;
-  }
 }
 
 .order-form__header {
@@ -52,21 +48,18 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     content: "";
-    width: 770px;
+    width: 100%;
     height: 24px;
     bottom: -13px;
-    left: 50%;
-    margin-left: -385px;
+    left: 0;
     background-image: url("../img/zigzag-fill-tablet.svg");
-    background-repeat: no-repeat;
     background-position: 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1150px;
+    width: 100%;
     height: 34px;
     bottom: -16px;
-    margin-left: -575px;
     background-image: url("../img/zigzag-fill-desktop.svg");
   }
 }
@@ -84,10 +77,16 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 1150px;
     padding: 0 225px;
+    margin: 0 auto;
   }
 }
 
 .order-form__form {
   margin-bottom: 55px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
 }

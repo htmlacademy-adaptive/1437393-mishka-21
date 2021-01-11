@@ -1,0 +1,118 @@
+.modal-cart {
+  margin: 0 auto;
+  top: 120px;
+  bottom: auto;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    width: 568px;
+    border: 1px solid @color-modal-border;
+    box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+    z-index: 22;
+  }
+}
+
+.modal-cart__wrapper {
+  width: auto;
+  min-height: 336px;
+  padding: 0 30px;
+  padding-top: 28px;
+  padding-bottom: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 38px;
+  }
+}
+
+.modal-cart__title {
+  .reset ();
+  margin-bottom: 14px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: @color-heading;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 11px;
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+.modal-cart__title-break {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.modal-cart__text {
+  .reset ();
+  margin-bottom: 23px;
+  font-size: 15px;
+  line-height: 30px;
+  color: @color-text;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 19px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.modal-cart__size-list {
+  .reset ();
+  margin-bottom: 31px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 7px;
+}
+
+.modal-cart__size-item {
+  width: 82px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: @color-text;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+  }
+
+  &:active {
+    border: 2px solid @color-radio-hover;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+  }
+}
+
+.modal-cart__size-item--current {
+  border: 2px solid @color-main-theme;
+}
+
+.modal-cart__button {
+  color: @color-background;
+  background-color: @color-main-theme;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+  }
+}
+
+.modal-show {
+  display: block;
+}

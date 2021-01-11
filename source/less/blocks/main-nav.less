@@ -22,6 +22,22 @@
   }
 }
 
+.main-nav__wrapper::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 88px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+  }
+}
+
 .main-nav__logo {
   min-height: 79px;
   margin: 0 auto;
