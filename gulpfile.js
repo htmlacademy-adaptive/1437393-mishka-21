@@ -122,14 +122,13 @@ const copy = (done) => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    // "source/css/style.css",
     "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
   })
   .pipe(gulp.dest("build"))
- done();
+  done();
 } ;
 
 exports.copy = copy;
@@ -137,7 +136,7 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
- return del("build");
+  return del("build");
 };
 
 exports.clean = clean;
