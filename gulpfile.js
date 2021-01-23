@@ -25,6 +25,7 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
+    .pipe(gulp.dest("./build/css"))
     .pipe(sourcemap.write("."))
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
@@ -55,6 +56,30 @@ const scripts = () => {
 };
 
 exports.scripts = scripts;
+
+// Server
+
+const server = (done) => {
+  sync.init({
+    server: {
+      baseDir: 'build'
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  done();
+}
+
+exports.server = server;
+
+// Watcher
+
+const watcher = () => {
+  gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/js/*.js", gulp.series("scripts"));
+}
 
 // Images
 
@@ -93,17 +118,17 @@ exports.sprite = sprite;
 
 // Copy
 
-const copy = () => {
+const copy = (done) => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/css/**",
     "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
   })
-  .pipe(gulp.dest("build"));
+  .pipe(gulp.dest("build"))
+  done();
 } ;
 
 exports.copy = copy;
@@ -115,30 +140,6 @@ const clean = () => {
 };
 
 exports.clean = clean;
-
-// Server
-
-const server = (done) => {
-  sync.init({
-    server: {
-      baseDir: 'build'
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-  });
-  done();
-}
-
-exports.server = server;
-
-// Watcher
-
-const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series("html"));
-  gulp.watch("source/js/*.js", gulp.series("scripts"));
-}
 
 // Build
 
